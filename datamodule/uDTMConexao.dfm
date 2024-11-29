@@ -7,6 +7,7 @@ object dtmPrincipal: TdtmPrincipal
     Catalog = ''
     Properties.Strings = (
       'RawStringEncoding=DB_CP')
+    Connected = True
     SQLHourGlass = True
     DisableSavepoints = False
     HostName = ''

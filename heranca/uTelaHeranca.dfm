@@ -12,7 +12,9 @@ object frmTelaHeranca: TfrmTelaHeranca
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   TextHeight = 15
   object pgcPrincipal: TPageControl
     Left = 0
@@ -22,10 +24,15 @@ object frmTelaHeranca: TfrmTelaHeranca
     ActivePage = tabListagem
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1069
-    ExplicitHeight = 660
     object tabListagem: TTabSheet
       Caption = 'Listagem'
+      object Label1: TLabel
+        Left = 168
+        Top = 216
+        Width = 34
+        Height = 15
+        Caption = 'Label1'
+      end
       object pnlListagemTopo: TPanel
         Left = 0
         Top = 0
@@ -33,7 +40,13 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 81
         Align = alTop
         TabOrder = 0
-        ExplicitWidth = 1061
+        object lblIndice: TLabel
+          Left = 8
+          Top = 3
+          Width = 85
+          Height = 15
+          Caption = 'CampoPesquisa'
+        end
         object mskPesquisar: TMaskEdit
           Left = 8
           Top = 24
@@ -64,6 +77,7 @@ object frmTelaHeranca: TfrmTelaHeranca
         TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
+        OnTitleClick = grdListagemTitleClick
       end
     end
     object tabManutencao: TTabSheet
@@ -78,8 +92,9 @@ object frmTelaHeranca: TfrmTelaHeranca
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 660
-    ExplicitWidth = 1069
+    DesignSize = (
+      1071
+      41)
     object btnNovo: TBitBtn
       Left = 12
       Top = 7
@@ -126,10 +141,11 @@ object frmTelaHeranca: TfrmTelaHeranca
       OnClick = btnApagarClick
     end
     object btnFechar: TBitBtn
-      Left = 976
+      Left = 974
       Top = 7
       Width = 75
       Height = 25
+      Anchors = [akTop, akRight]
       Caption = '&FECHAR'
       TabOrder = 5
       OnClick = btnFecharClick

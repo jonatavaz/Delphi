@@ -10,6 +10,8 @@ uses
 
 type
   TfrmCadCategoria = class(TfrmTelaHeranca)
+    QryListagemcategoriaId: TZIntegerField;
+    QryListagemdescricao: TZUnicodeStringField;
   private
     { Private declarations }
   public
