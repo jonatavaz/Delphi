@@ -3,6 +3,7 @@ inherited frmCadCategoria: TfrmCadCategoria
   StyleElements = [seFont, seClient, seBorder]
   TextHeight = 15
   inherited pgcPrincipal: TPageControl
+    ActivePage = tabManutencao
     inherited tabListagem: TTabSheet
       inherited Label1: TLabel
         StyleElements = [seFont, seClient, seBorder]
@@ -30,14 +31,41 @@ inherited frmCadCategoria: TfrmCadCategoria
           end>
       end
     end
+    inherited tabManutencao: TTabSheet
+      object edtCategoriaId: TLabeledEdit
+        Left = 0
+        Top = 64
+        Width = 121
+        Height = 23
+        EditLabel.Width = 39
+        EditLabel.Height = 15
+        EditLabel.Caption = 'C'#243'digo'
+        MaxLength = 10
+        NumbersOnly = True
+        TabOrder = 0
+        Text = ''
+      end
+      object edtDescricao: TLabeledEdit
+        Left = 0
+        Top = 128
+        Width = 529
+        Height = 23
+        EditLabel.Width = 51
+        EditLabel.Height = 15
+        EditLabel.Caption = 'Descri'#231#227'o'
+        MaxLength = 30
+        TabOrder = 1
+        Text = ''
+      end
+    end
   end
   inherited pnlRodape: TPanel
     StyleElements = [seFont, seClient, seBorder]
     ExplicitTop = 660
     ExplicitWidth = 1069
     inherited btnFechar: TBitBtn
-      Left = 972
-      ExplicitLeft = 970
+      Left = 968
+      ExplicitLeft = 966
     end
     inherited btnNavigator: TDBNavigator
       Hints.Strings = ()
