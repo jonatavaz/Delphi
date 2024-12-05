@@ -1,15 +1,18 @@
 inherited frmCadCategoria: TfrmCadCategoria
+  Tag = 2
   Caption = 'Cadastro de Categorias'
   StyleElements = [seFont, seClient, seBorder]
   TextHeight = 15
   inherited pgcPrincipal: TPageControl
-    ActivePage = tabManutencao
+    ExplicitWidth = 1071
+    ExplicitHeight = 668
     inherited tabListagem: TTabSheet
       inherited Label1: TLabel
         StyleElements = [seFont, seClient, seBorder]
       end
       inherited pnlListagemTopo: TPanel
         StyleElements = [seFont, seClient, seBorder]
+        ExplicitWidth = 1063
         inherited lblIndice: TLabel
           StyleElements = [seFont, seClient, seBorder]
         end
@@ -33,6 +36,7 @@ inherited frmCadCategoria: TfrmCadCategoria
     end
     inherited tabManutencao: TTabSheet
       object edtCategoriaId: TLabeledEdit
+        Tag = 1
         Left = 0
         Top = 64
         Width = 121
@@ -61,11 +65,9 @@ inherited frmCadCategoria: TfrmCadCategoria
   end
   inherited pnlRodape: TPanel
     StyleElements = [seFont, seClient, seBorder]
-    ExplicitTop = 660
-    ExplicitWidth = 1069
     inherited btnFechar: TBitBtn
-      Left = 968
-      ExplicitLeft = 966
+      Left = 962
+      ExplicitLeft = 962
     end
     inherited btnNavigator: TDBNavigator
       Hints.Strings = ()
