@@ -66,8 +66,8 @@ inherited frmCadCategoria: TfrmCadCategoria
   inherited pnlRodape: TPanel
     StyleElements = [seFont, seClient, seBorder]
     inherited btnFechar: TBitBtn
-      Left = 962
-      ExplicitLeft = 962
+      Left = 960
+      ExplicitLeft = 960
     end
     inherited btnNavigator: TDBNavigator
       Hints.Strings = ()

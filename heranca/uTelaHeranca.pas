@@ -190,6 +190,7 @@ begin
     ControlarBotoes(btnNovo, btnAlterar, btnCancelar, btnGravar, btnApagar, btnNavigator, pgcPrincipal, true);
     ControlarIndiceTab(pgcPrincipal, 0);
     LimparEdits;
+    QryListagem.Refresh;
   end
   else
   begin
@@ -219,6 +220,7 @@ begin
       ControlarIndiceTab(pgcPrincipal, 0);
       EstadoDoCadastro:= ecNenhum;
       LimparEdits;
+      QryListagem.Refresh;
     end
     else
     begin
