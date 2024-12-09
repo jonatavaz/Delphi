@@ -68,8 +68,8 @@ begin
       Qry:=TZQuery.Create(nil);
       Qry.Connection:=ConexaoDB;
       Qry.SQL.Clear;
-      Qry.SQL.Add('DELETE FROM categorias, '+
-                  ' WHERE categoriaId:=categoriaId ');
+      Qry.SQL.Add('DELETE FROM categorias '+
+                  ' WHERE categoriaId= :categoriaId ');
        Qry.ParamByName('categoriaId').AsInteger:=F_categoriaId;
        Try
           Qry.ExecSQL;
@@ -90,10 +90,10 @@ begin
       Qry:=TZQuery.Create(nil);
       Qry.Connection:=ConexaoDB;
       Qry.SQL.Clear;
-      Qry.SQL.Add('UPDATE categorias, '+
-                    ' SET descricao=:descricao '+
+      Qry.SQL.Add('UPDATE categorias '+
+                    ' SET descricao= :descricao '+
                     '     FROM categorias '+
-                    'WHERE categoriaId:=categoriaId ');
+                    'WHERE categoriaId= :categoriaId ');
        Qry.ParamByName('categoriaId').AsInteger:=Self.F_categoriaId;
        Qry.ParamByName('descricao').AsString:=Self.F_descricao;
        Try
@@ -141,7 +141,7 @@ begin
       Qry.SQL.Add('SELECT categoriaId, '+
                     '     descricao '+
                     '     FROM categorias '+
-                    ' WHERE categoriaId:=categoriaId ');
+                    ' WHERE categoriaId=:categoriaId ');
        Qry.ParamByName('categoriaId').AsInteger:=id;
        Try
           Qry.Open;
