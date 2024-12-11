@@ -6,6 +6,8 @@ inherited frmCadCliente: TfrmCadCliente
   TextHeight = 15
   inherited pgcPrincipal: TPageControl
     Height = 407
+    ActivePage = tabManutencao
+    ExplicitHeight = 407
     inherited tabListagem: TTabSheet
       ExplicitHeight = 377
       inherited Label1: TLabel
@@ -70,19 +72,6 @@ inherited frmCadCliente: TfrmCadCliente
         Height = 15
         Caption = 'Data Nascimento'
       end
-      object edtNome: TLabeledEdit
-        Tag = 2
-        Left = 0
-        Top = 128
-        Width = 849
-        Height = 23
-        EditLabel.Width = 33
-        EditLabel.Height = 15
-        EditLabel.Caption = 'Nome'
-        MaxLength = 60
-        TabOrder = 0
-        Text = ''
-      end
       object edtCategoriaId: TLabeledEdit
         Tag = 1
         Left = 0
@@ -94,7 +83,7 @@ inherited frmCadCliente: TfrmCadCliente
         EditLabel.Caption = 'C'#243'digo'
         MaxLength = 10
         NumbersOnly = True
-        TabOrder = 1
+        TabOrder = 0
         Text = ''
       end
       object edtCEP: TMaskEdit
@@ -104,7 +93,7 @@ inherited frmCadCliente: TfrmCadCliente
         Height = 23
         EditMask = '99.999-999;1;_'
         MaxLength = 10
-        TabOrder = 2
+        TabOrder = 1
         Text = '  .   -   '
       end
       object edtEndereco: TLabeledEdit
@@ -116,7 +105,7 @@ inherited frmCadCliente: TfrmCadCliente
         EditLabel.Height = 15
         EditLabel.Caption = 'Endere'#231'o'
         MaxLength = 60
-        TabOrder = 3
+        TabOrder = 2
         Text = ''
       end
       object edtBairro: TLabeledEdit
@@ -128,7 +117,7 @@ inherited frmCadCliente: TfrmCadCliente
         EditLabel.Height = 15
         EditLabel.Caption = 'Bairro'
         MaxLength = 40
-        TabOrder = 4
+        TabOrder = 3
         Text = ''
       end
       object edtCidade: TLabeledEdit
@@ -140,7 +129,7 @@ inherited frmCadCliente: TfrmCadCliente
         EditLabel.Height = 15
         EditLabel.Caption = 'Cidade'
         MaxLength = 50
-        TabOrder = 5
+        TabOrder = 4
         Text = ''
       end
       object edtTelefone: TMaskEdit
@@ -150,7 +139,7 @@ inherited frmCadCliente: TfrmCadCliente
         Height = 23
         EditMask = '(99) 9999-9999;1;_'
         MaxLength = 14
-        TabOrder = 6
+        TabOrder = 5
         Text = '(  )     -    '
       end
       object edtEmail: TLabeledEdit
@@ -162,7 +151,7 @@ inherited frmCadCliente: TfrmCadCliente
         EditLabel.Height = 15
         EditLabel.Caption = 'Email'
         MaxLength = 100
-        TabOrder = 7
+        TabOrder = 6
         Text = ''
       end
       object edtDataNascimento: TDateEdit
@@ -174,14 +163,27 @@ inherited frmCadCliente: TfrmCadCliente
         DialogTitle = 'Selecione a data'
         NumGlyphs = 2
         CalendarStyle = csDialog
+        TabOrder = 7
+      end
+      object edtNome: TLabeledEdit
+        Tag = 2
+        Left = 0
+        Top = 128
+        Width = 849
+        Height = 23
+        EditLabel.Width = 33
+        EditLabel.Height = 15
+        EditLabel.Caption = 'Nome'
+        MaxLength = 60
         TabOrder = 8
+        Text = ''
       end
     end
   end
   inherited pnlRodape: TPanel
     Top = 407
     StyleElements = [seFont, seClient, seBorder]
-    ExplicitTop = 670
+    ExplicitTop = 407
     inherited btnNavigator: TDBNavigator
       Hints.Strings = ()
     end
