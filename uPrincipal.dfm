@@ -1,7 +1,7 @@
 object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
-  Caption = 'Menu Principal'
+  Caption = '0'
   ClientHeight = 569
   ClientWidth = 974
   Color = clBtnFace
