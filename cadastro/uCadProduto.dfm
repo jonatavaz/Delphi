@@ -7,6 +7,7 @@ inherited frmCadProduto: TfrmCadProduto
   inherited pgcPrincipal: TPageControl
     Height = 381
     ActivePage = tabManutencao
+    ExplicitHeight = 373
     inherited tabListagem: TTabSheet
       ExplicitHeight = 351
       inherited Label1: TLabel
@@ -14,6 +15,7 @@ inherited frmCadProduto: TfrmCadProduto
       end
       inherited pnlListagemTopo: TPanel
         StyleElements = [seFont, seClient, seBorder]
+        ExplicitWidth = 1063
         inherited lblIndice: TLabel
           StyleElements = [seFont, seClient, seBorder]
         end
@@ -78,6 +80,14 @@ inherited frmCadProduto: TfrmCadProduto
         Width = 62
         Height = 15
         Caption = 'Quantidade'
+      end
+      object Label5: TLabel
+        Left = 516
+        Top = 111
+        Width = 51
+        Height = 15
+        Caption = 'Categoria'
+        OnClick = Label5Click
       end
       object edtNome: TLabeledEdit
         Tag = 2
@@ -146,6 +156,7 @@ inherited frmCadProduto: TfrmCadProduto
   inherited pnlRodape: TPanel
     Top = 381
     StyleElements = [seFont, seClient, seBorder]
+    ExplicitTop = 373
     inherited btnNavigator: TDBNavigator
       Hints.Strings = ()
     end
@@ -162,15 +173,18 @@ inherited frmCadProduto: TfrmCadProduto
       'FROM produtos AS p'
       '    LEFT JOIN categorias AS C ON c.categoriaId = p.categoriaId')
     object QryListagemprodutoId: TZIntegerField
-      FieldName = 'C'#243'digo'
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'produtoId'
       ReadOnly = True
     end
     object QryListagemnome: TZUnicodeStringField
-      FieldName = 'Nome'
+      DisplayLabel = 'Nome'
+      FieldName = 'nome'
       Size = 60
     end
     object QryListagemdescricao: TZUnicodeStringField
-      FieldName = 'Descri'#231#227'o'
+      DisplayLabel = 'Descricao'
+      FieldName = 'descricao'
       Size = 255
     end
     object QryListagemvalor: TZFMTBCDField
@@ -179,15 +193,18 @@ inherited frmCadProduto: TfrmCadProduto
       Size = 5
     end
     object QryListagemquantidade: TZFMTBCDField
-      FieldName = 'Quantidade'
+      DisplayLabel = 'Quantidade'
+      FieldName = 'quantidade'
       Precision = 18
       Size = 5
     end
     object QryListagemcategoriaId: TZIntegerField
-      FieldName = 'Cod. Categoria'
+      DisplayLabel = 'Cod. Categoria'
+      FieldName = 'categoriaId'
     end
     object QryListagemDescricaoCategoria: TZUnicodeStringField
-      FieldName = 'Descri'#231#227'o da Categoria'
+      DisplayLabel = 'Descri'#231#227'o da Categoria'
+      FieldName = 'DescricaoCategoria'
       Size = 30
     end
   end

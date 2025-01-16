@@ -99,6 +99,8 @@ object frmTelaHeranca: TfrmTelaHeranca
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 660
+    ExplicitWidth = 1069
     DesignSize = (
       1071
       41)
@@ -283,7 +285,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       OnClick = btnApagarClick
     end
     object btnFechar: TBitBtn
-      Left = 962
+      Left = 958
       Top = 7
       Width = 75
       Height = 25
@@ -318,7 +320,7 @@ object frmTelaHeranca: TfrmTelaHeranca
         11B2050FB10107A0000188FF00FFFF00FFFF00FFFF00FFFF00FF}
       TabOrder = 5
       OnClick = btnFecharClick
-      ExplicitLeft = 964
+      ExplicitLeft = 956
     end
     object btnNavigator: TDBNavigator
       Left = 441

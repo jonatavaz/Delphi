@@ -150,6 +150,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="classes\cCadCliente.pas"/>
+        <DCCReference Include="cadastro\uCadProduto.pas">
+            <Form>frmCadProduto</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="classes\cCadProduto.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
