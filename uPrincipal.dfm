@@ -1,7 +1,7 @@
 object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
-  Caption = '0'
+  Caption = 'Tela Principal'
   ClientHeight = 569
   ClientWidth = 974
   Color = clBtnFace
@@ -46,6 +46,7 @@ object frmPrincipal: TfrmPrincipal
       Caption = 'MOVIMENTA'#199#195'O'
       object VENDAS1: TMenuItem
         Caption = 'VENDAS'
+        OnClick = VENDAS1Click
       end
     end
     object RELATRIO1: TMenuItem

@@ -24,8 +24,6 @@ object frmTelaHeranca: TfrmTelaHeranca
     ActivePage = tabListagem
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1069
-    ExplicitHeight = 660
     object tabListagem: TTabSheet
       Caption = 'Listagem'
       object Label1: TLabel
@@ -42,7 +40,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         Height = 81
         Align = alTop
         TabOrder = 0
-        ExplicitWidth = 1061
         object lblIndice: TLabel
           Left = 8
           Top = 3
@@ -84,6 +81,7 @@ object frmTelaHeranca: TfrmTelaHeranca
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
         OnDblClick = grdListagemDblClick
+        OnKeyDown = grdListagemKeyDown
         OnTitleClick = grdListagemTitleClick
       end
     end
@@ -99,8 +97,6 @@ object frmTelaHeranca: TfrmTelaHeranca
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 660
-    ExplicitWidth = 1069
     DesignSize = (
       1071
       41)
@@ -320,7 +316,6 @@ object frmTelaHeranca: TfrmTelaHeranca
         11B2050FB10107A0000188FF00FFFF00FFFF00FFFF00FFFF00FF}
       TabOrder = 5
       OnClick = btnFecharClick
-      ExplicitLeft = 956
     end
     object btnNavigator: TDBNavigator
       Left = 441

@@ -1,7 +1,6 @@
 object dtmPrincipal: TdtmPrincipal
-  Height = 557
-  Width = 1000
-  PixelsPerInch = 120
+  Height = 446
+  Width = 800
   object ConexaoDB: TZConnection
     ControlsCodePage = cCP_UTF16
     Catalog = ''
@@ -19,8 +18,8 @@ object dtmPrincipal: TdtmPrincipal
     User = ''
     Password = ''
     Protocol = 'ado'
-    Left = 16
-    Top = 24
+    Left = 13
+    Top = 19
   end
   object QryScriptCategorias: TZQuery
     Connection = ConexaoDB
@@ -34,8 +33,8 @@ object dtmPrincipal: TdtmPrincipal
       ')'
       'END')
     Params = <>
-    Left = 144
-    Top = 24
+    Left = 115
+    Top = 19
   end
   object QryScriptClientes: TZQuery
     Connection = ConexaoDB
@@ -57,8 +56,8 @@ object dtmPrincipal: TdtmPrincipal
       ')'
       'END')
     Params = <>
-    Left = 272
-    Top = 24
+    Left = 218
+    Top = 19
   end
   object QryScriptProdutos: TZQuery
     Connection = ConexaoDB
@@ -78,8 +77,8 @@ object dtmPrincipal: TdtmPrincipal
       #9')'
       'END')
     Params = <>
-    Left = 408
-    Top = 24
+    Left = 326
+    Top = 19
   end
   object QryScriptVendas: TZQuery
     Connection = ConexaoDB
@@ -99,8 +98,8 @@ object dtmPrincipal: TdtmPrincipal
       #9')'
       'END;')
     Params = <>
-    Left = 536
-    Top = 24
+    Left = 429
+    Top = 19
   end
   object QryScriptItensVendas: TZQuery
     Connection = ConexaoDB
@@ -119,7 +118,7 @@ object dtmPrincipal: TdtmPrincipal
       #9')'
       'END')
     Params = <>
-    Left = 672
-    Top = 24
+    Left = 538
+    Top = 19
   end
 end

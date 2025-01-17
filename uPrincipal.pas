@@ -30,6 +30,7 @@ type
     procedure N2Click(Sender: TObject);
     procedure Cliente1Click(Sender: TObject);
     procedure PRODUTO1Click(Sender: TObject);
+    procedure VENDAS1Click(Sender: TObject);
   private
     { Private declarations }
     TeclaEnter: TMREnter;
@@ -45,7 +46,7 @@ implementation
 
 {$R *.dfm}
 
-uses uCadCategoria, uCadCliente, uCadProduto;
+uses uCadCategoria, uCadCliente, uCadProduto, uProVenda;
 
 procedure TfrmPrincipal.N2Click(Sender: TObject);
 begin
@@ -59,6 +60,13 @@ begin
     frmCadProduto:=TfrmCadProduto.Create(Self);
     frmCadProduto.ShowModal;
     frmCadProduto.Release;
+end;
+
+procedure TfrmPrincipal.VENDAS1Click(Sender: TObject);
+begin
+    frmProVenda:=TfrmProVenda.Create(Self);
+    frmProVenda.ShowModal;
+    frmProVenda.Release;
 end;
 
 procedure TfrmPrincipal.Cliente1Click(Sender: TObject);

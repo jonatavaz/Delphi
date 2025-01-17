@@ -71,6 +71,7 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>Vendas</SanitizedProjectName>
+        <Custom_Styles>Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Light.vsf</Custom_Styles>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>vclwinx;fmx;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;Skia.Package.RTL;IndyIPClient;dbxcds;vcledge;bindcompvclwinx;bindcompfmx;inetdb;FireDACSqliteDriver;DbxClientDriver;soapmidas;vclactnband;fmxFireDAC;dbexpress;DBXMySQLDriver;VclSmp;inet;vcltouch;fmxase;RtmRxDB290;dbrtl;Skia.Package.FMX;fmxdae;FireDACMSAccDriver;CustomIPTransport;ZCore;ZParseSql;vcldsnap;DBXInterBaseDriver;IndySystem;Skia.Package.VCL;vcldb;vclFireDAC;bindcomp;FireDACCommon;IndyCore;RESTBackendComponents;ZPlain;ZComponent;bindcompdbx;rtl;FireDACMySQLDriver;FireDACADSDriver;frce;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;adortl;RtmRxCtl290;vclimg;FireDACPgDriver;FireDAC;inetdbxpress;xmlrtl;tethering;ZDbc;bindcompvcl;dsnap;CloudService;fmxobj;bindcompvclsmp;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
@@ -155,6 +156,19 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="classes\cCadProduto.pas"/>
+        <DCCReference Include="datamodule\uFrmAtualizaDB.pas">
+            <Form>frmAtualizaDB</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="datamodule\uDTMVenda.pas">
+            <Form>dtmVenda</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="processo\uProVenda.pas">
+            <Form>frmProVenda</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
