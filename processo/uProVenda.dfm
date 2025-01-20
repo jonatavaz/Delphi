@@ -1,7 +1,7 @@
 inherited frmProVenda: TfrmProVenda
   Caption = 'Vendas'
   StyleElements = [seFont, seClient, seBorder]
-  OnKeyDown = FormKeyDown
+  OnKeyDown = dbGridItensVendaKeyDown
   TextHeight = 15
   inherited pgcPrincipal: TPageControl
     ActivePage = tabManutencao
@@ -279,7 +279,7 @@ inherited frmProVenda: TfrmProVenda
             Width = 1059
             Height = 448
             Align = alClient
-            DataSource = dtmVenda.dtsItensVenda
+            DataSource = dtsListagem
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgCancelOnExit]
             TabOrder = 0
             TitleFont.Charset = DEFAULT_CHARSET
@@ -287,7 +287,7 @@ inherited frmProVenda: TfrmProVenda
             TitleFont.Height = -12
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
-            OnKeyDown = dbGridItensVendaKeyDown
+            OnKeyDown = grdListagemKeyDown
             Columns = <
               item
                 Expanded = False

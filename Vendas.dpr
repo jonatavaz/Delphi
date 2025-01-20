@@ -17,7 +17,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   uDTMVenda in 'datamodule\uDTMVenda.pas' {dtmVenda: TDataModule},
-  uProVenda in 'processo\uProVenda.pas' {frmProVenda};
+  uProVenda in 'processo\uProVenda.pas' {frmProVenda},
+  cProVenda in 'classes\cProVenda.pas';
 
 {$R *.res}
 
@@ -25,7 +26,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TdtmVenda, dtmVenda);
-  Application.CreateForm(TfrmProVenda, frmProVenda);
   Application.Run;
 end.
