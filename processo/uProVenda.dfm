@@ -347,7 +347,7 @@ inherited frmProVenda: TfrmProVenda
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object edtValor: TCurrencyEdit
+          object edtValorTotal: TCurrencyEdit
             Left = 936
             Top = 6
             Width = 121
