@@ -77,16 +77,11 @@ object dtmVenda: TdtmVenda
     end
     object cdsItensVendasvalor: TFloatField
       DisplayLabel = 'Valor Unit'#225'rio'
-      FieldName = 'valor'
+      FieldName = 'valorUnitario'
     end
     object cdsItensVendasvalorTotalProduto: TFloatField
       DisplayLabel = 'Total do Produto'
       FieldName = 'valorTotalProduto'
-    end
-    object cdsItensVendasvalorTotalVenda: TAggregateField
-      FieldName = 'valorTotalVenda'
-      DisplayName = ''
-      Expression = 'SUM(ValorTotalProduto)'
     end
   end
   object dtsCliente: TDataSource
