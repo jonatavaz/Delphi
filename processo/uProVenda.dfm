@@ -128,9 +128,9 @@ inherited frmProVenda: TfrmProVenda
         Top = 56
         Width = 735
         Height = 23
+        DataSource = dtmVendas.dtsCliente
         KeyField = 'clienteId'
         ListField = 'nome'
-        ListSource = dtmVenda.dtsCliente
         TabOrder = 2
       end
       object edtDataVenda: TDateEdit
@@ -151,6 +151,8 @@ inherited frmProVenda: TfrmProVenda
         Height = 534
         Align = alBottom
         TabOrder = 4
+        ExplicitTop = 96
+        ExplicitWidth = 1061
         object Panel3: TPanel
           Left = 1
           Top = 42
@@ -158,6 +160,7 @@ inherited frmProVenda: TfrmProVenda
           Height = 450
           Align = alClient
           TabOrder = 1
+          ExplicitWidth = 1059
           object Label2: TLabel
             Left = 897
             Top = 451
@@ -171,7 +174,7 @@ inherited frmProVenda: TfrmProVenda
             Width = 1059
             Height = 448
             Align = alClient
-            DataSource = dtmVenda.dtsItensVenda
+            DataSource = dtmVendas.dtsItensVenda
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgCancelOnExit]
             TabOrder = 0
             TitleFont.Charset = DEFAULT_CHARSET
@@ -221,6 +224,7 @@ inherited frmProVenda: TfrmProVenda
           Height = 41
           Align = alBottom
           TabOrder = 2
+          ExplicitWidth = 1059
           object Label3: TLabel
             Left = 939
             Top = 14
@@ -264,6 +268,7 @@ inherited frmProVenda: TfrmProVenda
           Height = 41
           Align = alTop
           TabOrder = 0
+          ExplicitWidth = 1059
           object edtValorUnitario: TCurrencyEdit
             Left = 380
             Top = 9
@@ -347,10 +352,9 @@ inherited frmProVenda: TfrmProVenda
         Width = 366
         Height = 23
         DataField = 'nome'
-        DataSource = dtsListagem
+        DataSource = dtmVendas.dtsProdutos
         KeyField = 'produtoId'
         ListField = 'nome'
-        ListSource = dtmVenda.dtsProdutos
         TabOrder = 0
         OnExit = lkpProdutoExit
       end
@@ -360,7 +364,7 @@ inherited frmProVenda: TfrmProVenda
     StyleElements = [seFont, seClient, seBorder]
     inherited btnFechar: TBitBtn
       Left = 952
-      ExplicitLeft = 952
+      ExplicitLeft = 950
     end
     inherited btnNavigator: TDBNavigator
       Hints.Strings = ()
@@ -375,6 +379,8 @@ inherited frmProVenda: TfrmProVenda
       #9'   vendas.totalvenda'
       'FROM vendas'
       'INNER JOIN clientes ON clientes.clienteId = vendas.clienteId')
+    Left = 560
+    Top = 32
     object QryListagemvendaId: TZIntegerField
       DisplayLabel = 'N'#250'mero Venda'
       FieldName = 'vendaId'
@@ -400,5 +406,8 @@ inherited frmProVenda: TfrmProVenda
       Precision = 18
       Size = 5
     end
+  end
+  inherited dtsListagem: TDataSource
+    Top = 34
   end
 end

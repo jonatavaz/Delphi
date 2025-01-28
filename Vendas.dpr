@@ -16,7 +16,7 @@ uses
   uFrmAtualizaDB in 'datamodule\uFrmAtualizaDB.pas' {frmAtualizaDB},
   Vcl.Themes,
   Vcl.Styles,
-  uDTMVenda in 'datamodule\uDTMVenda.pas' {dtmVenda: TDataModule},
+  uDTMVenda in 'datamodule\uDTMVenda.pas' {dtmVendas: TDataModule},
   uProVenda in 'processo\uProVenda.pas' {frmProVenda},
   cProVenda in 'classes\cProVenda.pas';
 

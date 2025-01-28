@@ -1,4 +1,4 @@
-object dtmVenda: TdtmVenda
+object dtmVendas: TdtmVendas
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
   Height = 220
@@ -10,7 +10,7 @@ object dtmVenda: TdtmVenda
       '             nome'
       'FROM clientes')
     Params = <>
-    Left = 56
+    Left = 64
     Top = 56
     object QryClienteclienteId: TZIntegerField
       DisplayLabel = 'C'#243'digo'
@@ -25,6 +25,7 @@ object dtmVenda: TdtmVenda
   end
   object QryProdutos: TZQuery
     Connection = dtmPrincipal.ConexaoDB
+    Active = True
     SQL.Strings = (
       'SELECT produtoId,'
       '       nome,'
