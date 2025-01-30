@@ -24,6 +24,7 @@ type
     PRODUTO2: TMenuItem;
     N4: TMenuItem;
     VENDASPORDATA1: TMenuItem;
+    CATEGORIA1: TMenuItem;
     procedure mnuFecharClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -31,6 +32,7 @@ type
     procedure Cliente1Click(Sender: TObject);
     procedure PRODUTO1Click(Sender: TObject);
     procedure VENDAS1Click(Sender: TObject);
+    procedure CATEGORIA1Click(Sender: TObject);
   private
     { Private declarations }
     TeclaEnter: TMREnter;
@@ -46,7 +48,7 @@ implementation
 
 {$R *.dfm}
 
-uses uCadCategoria, uCadCliente, uCadProduto, uProVenda;
+uses uCadCategoria, uCadCliente, uCadProduto, uProVenda, uRelCategoria, ufrmRelCategoria;
 
 procedure TfrmPrincipal.N2Click(Sender: TObject);
 begin
@@ -67,6 +69,14 @@ begin
     frmProVenda:=TfrmProVenda.Create(Self);
     frmProVenda.ShowModal;
     frmProVenda.Release;
+end;
+
+procedure TfrmPrincipal.CATEGORIA1Click(Sender: TObject);
+begin
+   frmRelCategoria:=TfrmRelCategotia.Create(Self);
+   frmRelCategoria.Relatorio.PreviewModal;
+   frmRelCategoria.Release;
+
 end;
 
 procedure TfrmPrincipal.Cliente1Click(Sender: TObject);

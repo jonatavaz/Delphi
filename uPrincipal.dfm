@@ -3,7 +3,7 @@ object frmPrincipal: TfrmPrincipal
   Top = 0
   Caption = 'Tela Principal'
   ClientHeight = 473
-  ClientWidth = 850
+  ClientWidth = 964
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,7 +16,7 @@ object frmPrincipal: TfrmPrincipal
   OnCreate = FormCreate
   TextHeight = 15
   object mainPrincipal: TMainMenu
-    Left = 880
+    Left = 640
     object CADASTRO1: TMenuItem
       Caption = 'CADASTRO'
       object Cliente1: TMenuItem
@@ -51,6 +51,10 @@ object frmPrincipal: TfrmPrincipal
     end
     object RELATRIO1: TMenuItem
       Caption = 'RELAT'#211'RIOS'
+      object CATEGORIA1: TMenuItem
+        Caption = 'CATEGORIA'
+        OnClick = CATEGORIA1Click
+      end
       object CLIENTE2: TMenuItem
         Caption = 'CLIENTE'
       end
